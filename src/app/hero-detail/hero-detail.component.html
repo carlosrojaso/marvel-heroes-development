@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-12">
+    <a href="" (click)="goBack()">◁ Go back</a>
+  </div>
+</div>
+
+<div class="row" *ngIf="hero">
+  <div class="col-4">
+    <h2>{{ hero.name }}</h2>
+    <img class="img-fluid" src="{{ hero.thumbnail }}" alt="{{ hero.name }}">
+  </div>
+  <div class="col-8">
+    <h2>Description</h2>
+    <div *ngIf="hero.description.length; then description else placeholder"></div>
+    
+    <ng-template #description><p>{{ hero.description }}</p></ng-template>
+    <ng-template #placeholder><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, est esse eos consequatur possimus inventore rerum soluta libero tempore a deserunt ipsa placeat illum animi incidunt mollitia veritatis laboriosam perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, est esse eos consequatur possimus inventore rerum soluta libero tempore a deserunt ipsa placeat illum animi incidunt mollitia veritatis laboriosam perspiciatis.</p></ng-template>
+  </div>
+</div>

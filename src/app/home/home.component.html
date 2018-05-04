@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col">
+    <p class="lead">Here are some heroes to explore:</p>
+  </div>
+</div>
+
+<hero-list [heroes]="results"></hero-list>
+
+<a href=""
+  [routerLink]="['explore']"
+  [queryParams]="{ page: 1, series: 'all' }">
+  Explore All
+</a>

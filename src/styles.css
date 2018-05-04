@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Bangers|Lato');
+
+header {
+    background: #f0141f;
+}
+
+header h1 a {
+    font-family: "Bangers", cursive;
+    padding-left: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+header h1 a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+h1, h2 {
+    font-family: "Bangers", cursive;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+a {
+    color: #f0141f;
+}
+
+a:hover {
+    color: #e01a24;
+}
+
+a, p {
+    font-family: "Lato", sans-serif;
+}

@@ -1,0 +1,16 @@
+<form action="">
+  <label for="filter">Filter by:</label>
+  <select
+    id="filter"
+    required
+    name="filter"
+    [(ngModel)]='selected'
+    (ngModelChange)='onSelection()'>
+      <option
+        *ngFor='let option of options'
+        [value]="option.filter"
+        [selected]="option.filter == selected">
+          {{option.name}}
+        </option>
+  </select>
+</form>

@@ -1,0 +1,14 @@
+<explore-filter
+  (onSelectionChange)="loadResultsFor($event)"
+  [selected]="selectedSeries"
+  [options]="series">
+</explore-filter>
+
+<hero-list [heroes]="results"></hero-list>
+
+<paginator
+  [totalPages]="totalPages"
+  [currentPage]="currentPage"
+  (onNext)="loadPageResultsFor($event, null)"
+  (onPrevious)="loadPageResultsFor($event, null)">
+</paginator>

@@ -1,0 +1,12 @@
+<div class="paginator row mt-5" *ngIf="pagesArray.length > 0">
+  <a class="col-md-2 text-right" href=""
+    (click)="previous()">◁ Previous Page</a>
+  <ul class="col-md-8 list-inline">
+    <li class="list-inline-item" 
+      *ngFor="let page of pagesArray">
+      <a href="" (click)="goTo(page)" [class.selected]="page == currentPage">{{ page }}</a>
+    </li>
+  </ul>
+  <a class="col-md-2" href=""
+    (click)="next()">Next Page ▷</a>
+</div>

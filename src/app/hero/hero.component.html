@@ -1,0 +1,12 @@
+<div class="card" style="width: 20rem">
+  <img
+    src="{{ hero.thumbnail }}"
+    alt="{{ hero.name }}"
+    width="300"
+    class="card-img-top img-fluid img-thumbnail">
+    <div class="card-body">
+      <a href="" [routerLink]="['/detail', hero.id]">
+          <h5 class="card-title">{{ hero.name }}</h5>
+      </a>
+    </div>
+</div>
