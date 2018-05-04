@@ -3,14 +3,15 @@ import { HttpClient } from '@angular/common/http';
 import { Md5 } from 'ts-md5/dist/md5';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map'; // Solves the issue with map on Observables
+import { environment } from "../../environments/environment";
 
 import { HeroSearchResult } from '../model/heroSearchResult.model';
 import { Hero } from '../model/hero.model';
 
 import { RESULTS_PER_PAGE } from '../service/herosearch.service.config'; // This may need renaming
 
-export const PUBLIC_API_KEY: string = "";
-export const PRIVATE_API_KEY: string = "";
+export const PUBLIC_API_KEY: string = environment.PUBLIC_API_KEY;
+export const PRIVATE_API_KEY: string = environment.PRIVATE_API_KEY;
 export const API_URL: string = "https://gateway.marvel.com/v1/public/";
 export const API_URL_CHARS: string = "https://gateway.marvel.com/v1/public/characters";
 export const API_URL_SERIES: string = "https://gateway.marvel.com/v1/public/series";
