@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { HandleError } from '../util/HandleError.interface';
 import { HeroSearchService } from '../service/herosearch.service';
 import { Hero } from '../model/hero.model';

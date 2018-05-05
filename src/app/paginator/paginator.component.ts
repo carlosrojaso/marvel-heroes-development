@@ -1,6 +1,6 @@
 import { Component, Output, Input, OnChanges, SimpleChanges, HostBinding } from '@angular/core';
 import { EventEmitter } from '@angular/core';
-import { ISubscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 import { HeroSearchService } from '../service/herosearch.service';
 
 @Component({
@@ -16,7 +16,7 @@ export class PaginatorComponent implements OnChanges {
   @HostBinding('style.display') display: string;
   
   pagesArray: number[];
-  private loadingSub: ISubscription;
+  private loadingSub: Subscription;
   
   
   constructor(private service: HeroSearchService) { 

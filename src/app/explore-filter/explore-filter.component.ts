@@ -1,6 +1,6 @@
 import { Component, Output, EventEmitter, Input, HostBinding } from '@angular/core';
 import { HeroSearchService } from '../service/herosearch.service';
-import { ISubscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'explore-filter',
@@ -12,7 +12,7 @@ export class ExploreFilterComponent {
   @Input() options: any[];
   @Input() selected: string;
   @HostBinding('style.display') display: string;
-  private loadingSub: ISubscription;
+  private loadingSub: Subscription;
   
   // @TODO: Repeated code on here and paginator.component.
   // Refactor to Directive or similar.

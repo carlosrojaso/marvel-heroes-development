@@ -1,11 +1,10 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { ActivatedRoute, Router, NavigationStart } from '@angular/router';
-import { ISubscription } from 'rxjs/Subscription';
+import { Subscription ,  Observable } from 'rxjs';
 import { HeroSearchService } from '../service/herosearch.service';
 import { HeroSearchResult } from '../model/heroSearchResult.model';
 import { Hero } from '../model/hero.model';
-import { RESULTS_PER_PAGE } from '../service/herosearch.service.config'; // This may need renaming
-import { Observable } from 'rxjs/Observable';
+import { RESULTS_PER_PAGE } from '../service/herosearch.service.config';
 import { PreviousRouteService } from '../service/previous-route.service';
 import { HandleError } from '../util/HandleError.interface';
 
@@ -29,8 +28,8 @@ export class HeroExploreComponent implements HandleError{
   private defaultPage = 1;
   private defaultSeriesFilter = 'all';
 
-  private routeChange: ISubscription;
-  private routerChange: ISubscription;
+  private routeChange: Subscription;
+  private routerChange: Subscription;
 
   constructor(
     private router: Router,

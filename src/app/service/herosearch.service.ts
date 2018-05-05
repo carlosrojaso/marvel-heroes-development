@@ -1,9 +1,9 @@
 import { Injectable, Inject, EventEmitter, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Md5 } from 'ts-md5/dist/md5';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map'; // Solves the issue with map on Observables
+import { Observable } from 'rxjs';
 import { environment } from "../../environments/environment";
+import { map } from 'rxjs/operators';
 
 import { HeroSearchResult } from '../model/heroSearchResult.model';
 import { Hero } from '../model/hero.model';
@@ -72,7 +72,8 @@ export class HeroSearchService {
 
     this.loadingResults.emit(true);
    
-    return this.http.get(queryUrl).map(
+    return this.http.get(queryUrl).pipe(
+    map(
       res => {
         const data = res['data'];
         const results = data['results'];
@@ -91,7 +92,7 @@ export class HeroSearchService {
 
         return new HeroSearchResult(Math.floor(data.total / RESULTS_PER_PAGE), heroes);
       }
-    );
+    ));
   }
 
   private generateHash(timestamp: number): string | Int32Array {
