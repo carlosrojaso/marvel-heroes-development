@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  PUBLIC_API_KEY: '',
+  PRIVATE_API_KEY: ''
 };
