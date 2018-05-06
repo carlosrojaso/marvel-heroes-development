@@ -8,7 +8,8 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build.prod": "ng build --aot --prod --progress false --base-href \"https://carlosrojaso.github.io/marvel-heroes-development/\""
   },
   "private": true,
   "dependencies": {
